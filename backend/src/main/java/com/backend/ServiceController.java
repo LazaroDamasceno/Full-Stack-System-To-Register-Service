@@ -1,10 +1,7 @@
 package com.backend;
 
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,22 +13,27 @@ public class ServiceController {
     final
     ServiceService service;
 
+    @GetMapping("/")
     public List<ServiceEntity> getAll() {
         return service.getAll();
     }
 
+    @GetMapping("/{id}")
     public ServiceEntity getById(@PathVariable(value = "id") int id) {
         return service.getById(id);
     }
 
+    @PostMapping("/add")
     public ServiceEntity add(@RequestBody ServiceEntity entity) {
         return service.add(entity);
     }
 
+    @PutMapping("/update")
     public ServiceEntity update(@RequestBody ServiceEntity entity) {
         return service.update(entity);
     }
 
+    @DeleteMapping("/delete")
     public void delete(@PathVariable(value = "id") int id) {
         service.delete(id);
     }
