@@ -21,6 +21,14 @@ public class ServiceService {
     }
 
     public ServiceEntity add(ServiceEntity entity) {
+        if (entity.getPricePaid() == null
+                || entity.getPricePaid() == 0
+                || entity.getPaymentDate() == null
+        ) {
+
+        } else {
+
+        }
         return repository.saveAndFlush(entity);
     }
 
