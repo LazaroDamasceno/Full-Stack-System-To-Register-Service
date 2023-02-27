@@ -6,15 +6,15 @@ function App() {
           <div className="col-6">
               <div>
                   <label className="form-label">Name of the client: </label>
-                  <input type="text" className="form-control"/>
+                  <input name="recipient" type="text" className="form-control"/>
               </div>
               <div>
                   <label className="form-label">Starting date: </label>
-                  <input type="date" className="form-control"/>
+                  <input name="startingDate" type="date" className="form-control"/>
               </div>
               <div>
                   <label className="form-label">Ending date: </label>
-                  <input type="date" className="form-control"/>
+                  <input name="endingDate" type="date" className="form-control"/>
               </div>
           </div>
       </form>
