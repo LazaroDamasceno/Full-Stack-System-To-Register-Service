@@ -22,7 +22,7 @@ public class ServiceEntity {
     private String description;
     private Double pricePaid;
     @Temporal(TemporalType.DATE)
-    private Date commenceData = new Date();
+    private Date startingDate = new Date();
     @Temporal(TemporalType.DATE)
     private Date endingDate;
     @Temporal(TemporalType.DATE)
