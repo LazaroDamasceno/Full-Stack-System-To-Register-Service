@@ -1,6 +1,8 @@
 package com.backend;
 
+import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -53,7 +55,7 @@ public class ServiceController {
         return service.cancelService(id);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable(value = "id") int id) {
         service.delete(id);
     }
