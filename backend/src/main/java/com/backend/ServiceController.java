@@ -33,7 +33,7 @@ public class ServiceController {
         return service.update(entity);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/cancel/{id}")
     public ServiceEntity cancelService(@PathVariable(value = "id") int id) {
         return service.cancelService(id);
     }
