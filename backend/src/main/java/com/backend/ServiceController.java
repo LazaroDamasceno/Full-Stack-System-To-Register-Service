@@ -25,11 +25,6 @@ public class ServiceController {
         return service.getById(id);
     }
 
-    /* @GetMapping("/pending")
-    public List<ServiceEntity> getServicesWithPendingPayment() {
-        return service.getServicesWithPendingPayment();
-    } */
-
     @GetMapping("/pending")
     public List<ServiceEntity> getServicesWithPendingPayment() {
         return service.getServicesWithPendingPayment();
