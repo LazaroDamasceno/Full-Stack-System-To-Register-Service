@@ -19,10 +19,12 @@ public class ServiceEntity {
     @Column(nullable = false)
     private double price;
     @Column(nullable = false)
-    private String description;
-    private double pricePaid;
+    private String description
+    @Temporal(TemporalType.DATE)
     private Date commenceData = new Date();
+    @Temporal(TemporalType.DATE)
     private Date endingDate;
+    @Temporal(TemporalType.DATE)
     private Date paymentDate;
 
 }
