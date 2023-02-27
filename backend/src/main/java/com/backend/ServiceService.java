@@ -22,6 +22,14 @@ public class ServiceService {
         return repository.findById(id);
     }
 
+    public List<ServiceEntity> getServicesWithPendingPayment() {
+        return getAll().stream().filter(e -> e.getStatus().equals("PENDING")).toList();
+    }
+
+    public List<ServiceEntity> getCancelledServices() {
+        return getAll().stream().filter(e -> e.getStatus().equals("CANCELLED")).toList();
+    }
+
     public ServiceEntity add(ServiceEntity entity) {
         if (entity.getPricePaid() == null
                 || entity.getPricePaid() == 0
