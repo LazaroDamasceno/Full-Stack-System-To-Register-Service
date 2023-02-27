@@ -20,8 +20,8 @@
 
 If the installed Java is not a LTS (Long Term Support) version, change to one out of the LTS ones: 8, 11 or 17.
 
-There are various Java available to be downloaded, such as the Oracle JDK, Oracle OpenJDK and Amazon Corretto OpenJDK. 
+There are various Java available to be downloaded, such as the [Oracle JDK](https://www.oracle.com/java/technologies/downloads) and the [Amazon Corretto OpenJDK](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc). 
 
-Consider picking the newest LTS version of Node.
+Consider picking the newest LTS version of [Node](https://nodejs.org/en/).
 
 # 3 Running the project
