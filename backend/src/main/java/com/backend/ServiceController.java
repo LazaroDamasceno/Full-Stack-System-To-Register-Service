@@ -56,7 +56,7 @@ public class ServiceController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable(value = "id") int id) {
+    public void delete(@PathVariable(value = "id") Integer id) {
         service.delete(id);
     }
 
