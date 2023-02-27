@@ -33,6 +33,11 @@ public class ServiceController {
         return service.update(entity);
     }
 
+    @PutMapping("/update")
+    public ServiceEntity cancelService(@PathVariable(value = "id") int id) {
+        return service.cancelService(id);
+    }
+
     @DeleteMapping("/delete")
     public void delete(@PathVariable(value = "id") int id) {
         service.delete(id);

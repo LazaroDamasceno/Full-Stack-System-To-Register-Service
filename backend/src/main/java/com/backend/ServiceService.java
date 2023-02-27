@@ -3,6 +3,7 @@ package com.backend;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 @Service
@@ -39,6 +40,12 @@ public class ServiceService {
         ) {
             entity.setStatus("FINISHED");
         }
+        return repository.saveAndFlush(entity);
+    }
+
+    public ServiceEntity cancelService(int id) {
+        ServiceEntity entity = getById(id);
+        entity.setStatus("CANCELLED");
         return repository.saveAndFlush(entity);
     }
 
