@@ -23,11 +23,11 @@ public class ServiceService {
     public ServiceEntity add(ServiceEntity entity) {
         if (entity.getPricePaid() == null
                 || entity.getPricePaid() == 0
-                || entity.getPaymentDate() == null
-        ) {
-
+                || entity.getPaymentDate() == null)
+        {
+            entity.setStatus("PENDING");
         } else {
-
+            entity.setStatus("FINISHED");
         }
         return repository.saveAndFlush(entity);
     }

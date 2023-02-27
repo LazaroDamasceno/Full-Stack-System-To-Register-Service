@@ -27,5 +27,6 @@ public class ServiceEntity {
     private Date endingDate;
     @Temporal(TemporalType.DATE)
     private Date paymentDate;
+    private String status;
 
 }
