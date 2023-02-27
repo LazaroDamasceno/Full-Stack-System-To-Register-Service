@@ -21,7 +21,7 @@ public class ServiceEntity {
     @Column(nullable = false)
     private String description;
     private double pricePaid;
-    private Date commenceData;
+    private Date commenceData = new Date();
     private Date endingDate;
     private Date paymentDate;
 
