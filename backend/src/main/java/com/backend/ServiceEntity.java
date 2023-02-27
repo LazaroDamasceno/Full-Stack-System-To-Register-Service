@@ -19,7 +19,7 @@ public class ServiceEntity {
     @Column(nullable = false)
     private double price;
     @Column(nullable = false)
-    private String description
+    private String description;
     @Temporal(TemporalType.DATE)
     private Date commenceData = new Date();
     @Temporal(TemporalType.DATE)
