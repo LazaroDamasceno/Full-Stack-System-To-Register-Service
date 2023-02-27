@@ -18,4 +18,8 @@
 
 ## 2.3 If Node or Java is already installed
 
+If the installed Java is not a LTS (Long Term Support) version, change to one pf the LTS ones: 8, 11 or 17.
+
+Consider picking the newest LTS version of Node.
+
 # 3 Running the project
