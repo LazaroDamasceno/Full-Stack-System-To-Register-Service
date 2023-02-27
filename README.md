@@ -2,13 +2,13 @@
 
 ## Version's technologies used
 
-Node's version
+Node's version: 18.14
 
-NPM's version
+NPM's version: 9.5.1
 
-Java's version
+Java's version: 17.6
 
-Original source
+Original source: [Página para Cadastro de Serviços - Spring Boot e React](https://www.youtube.com/watch?v=Sun4wXH88V4)
 
 ##  Description
 
