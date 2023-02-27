@@ -12,6 +12,8 @@ Original source: [Página para Cadastro de Serviços - Spring Boot e React](http
 
 ##  Description
 
+Development of a page to register services with ReactJS (frontend) and Spring Boot (backend).
+
 # 2 Setting up the environment
 
 If the installed Java is not a LTS (Long Term Support) version, change to one out of the LTS ones: 8, 11 or 17.
