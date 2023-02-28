@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/services")
 @AllArgsConstructor
+@CrossOrigin("http://http://localhost:5173/")
 public class ServiceController {
 
     final

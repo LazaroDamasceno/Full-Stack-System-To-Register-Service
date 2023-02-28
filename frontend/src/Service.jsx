@@ -1,6 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import {useEffect} from "react";
+import axios from "axios";
 
 export default function Service() {
 
@@ -22,6 +23,13 @@ export default function Service() {
 
     function handleSubmit(event) {
         event.preventDefault()
+        axios
+            .post("http://localhost:8080/services/", user)
+            .then(
+                results => {
+
+                }
+            )
     }
 
     return (
@@ -47,7 +55,7 @@ export default function Service() {
                     </div>
                     <div>
                         <label className="form-label">Price: </label>
-                        <input onChange={} value={service.price} name="price" type="text" className="form-control"/>
+                        <input onChange={handleChange} value={service.price} name="price" type="text" className="form-control"/>
                     </div>
                     <div>
                         <label className="form-label">Price paid: </label>
@@ -58,7 +66,7 @@ export default function Service() {
                         <input onChange={handleChange} value={service.paymentDate} name="paymentDate" type="date" className="form-control"/>
                     </div>
                     <br/>
-                    <input type="submit" value="registration" />
+                    <input type="submit" className="btn btn-success" value="registration" />
                 </div>
             </form>
         </div>
