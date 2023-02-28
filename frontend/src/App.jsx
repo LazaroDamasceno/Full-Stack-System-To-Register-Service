@@ -16,6 +16,18 @@ function App() {
                   <label className="form-label">Ending date: </label>
                   <input name="endingDate" type="date" className="form-control"/>
               </div>
+              <div>
+                  <label className="form-label">Description: </label>
+                  <input name="description" type="text" className="form-control"/>
+              </div>
+              <div>
+                  <label className="form-label">Price paid: </label>
+                  <input name="pricePaid" type="number" className="form-control"/>
+              </div>
+              <div>
+                  <label className="form-label">Payment Date: </label>
+                  <input name="paymentDate" type="date" className="form-control"/>
+              </div>
           </div>
       </form>
     </div>
