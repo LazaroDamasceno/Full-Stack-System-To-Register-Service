@@ -14,19 +14,28 @@ public class ServiceEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Integer id;
+
     @Column(nullable = false)
     private String recipient;
+
     @Column(nullable = false)
     private Double price;
+
     @Column(nullable = false)
     private String description;
-    private Double pricePaid;
-    @Temporal(TemporalType.DATE)
+
+     Double pricePaid;
+
+    @(TemporalType.DATE)
     private Date startingDate = new Date();
+
     @Temporal(TemporalType.DATE)
     private Date endingDate;
+
     @Temporal(TemporalType.DATE)
-    private Date paymentDate;
-    private String status;
+
+    Date paymentDate;
+
+    String status;
 
 }
