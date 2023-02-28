@@ -16,7 +16,7 @@ public class ServiceEntity {
     private Integer id;
 
     @Column(nullable = false)
-    private String recipient;
+    private String clientName;
 
     @Column(nullable = false)
     private Double price;
@@ -26,7 +26,7 @@ public class ServiceEntity {
 
      Double pricePaid;
 
-    @(TemporalType.DATE)
+    @Temporal(TemporalType.DATE)
     private Date startingDate = new Date();
 
     @Temporal(TemporalType.DATE)
