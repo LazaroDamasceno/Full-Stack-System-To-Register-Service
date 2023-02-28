@@ -20,6 +20,10 @@ export default function Service() {
         setService({...service, [event.target.name]:event.target.value})
     }
 
+    function handleSubmit(event) {
+        event.preventDefault()
+    }
+
     return (
         <div className="container">
             <h1>Registration of Services</h1>
@@ -53,6 +57,8 @@ export default function Service() {
                         <label className="form-label">Payment Date: </label>
                         <input onChange={handleChange} value={service.paymentDate} name="paymentDate" type="date" className="form-control"/>
                     </div>
+                    <br/>
+                    <input type="submit" value="registration" />
                 </div>
             </form>
         </div>
