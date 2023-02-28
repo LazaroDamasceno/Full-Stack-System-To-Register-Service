@@ -1,11 +1,28 @@
-export function Service() {
+import React from "react";
+import {useState} from "react";
+import {useEffect} from "react";
+
+export default function Service()
+
+    const [service, setService] = useState({
+        recipient:'',
+        startingDate:'',
+        endingDate:'',
+        description:'',
+        price:'',
+        pricePaid:'',
+        paymentDate:''
+    })
+
+    const [services, setServices] = useState([])
+
     return (
         <div className="container">
             <h1>Registration of Services</h1>
             <form>
                 <div className="col-6">
                     <div>
-                        <label className="form-label">Name of the client: </label>
+                        <label className="form-label">Client's name: </label>
                         <input name="recipient" type="text" className="form-control"/>
                     </div>
                     <div>
@@ -36,4 +53,5 @@ export function Service() {
             </form>
         </div>
     )
+
 }
