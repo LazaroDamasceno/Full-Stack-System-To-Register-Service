@@ -21,6 +21,10 @@ function App() {
                   <input name="description" type="text" className="form-control"/>
               </div>
               <div>
+                  <label className="form-label">Price: </label>
+                  <input name="price" type="text" className="form-control"/>
+              </div>
+              <div>
                   <label className="form-label">Price paid: </label>
                   <input name="pricePaid" type="number" className="form-control"/>
               </div>
