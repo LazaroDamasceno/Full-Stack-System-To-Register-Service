@@ -81,7 +81,6 @@ export default function Service() {
             <table className="table">
                 <thead>
                     <tr>
-                        <th scope="col">id</th>
                         <th scope="col">client's name</th>
                         <th scope="col">description</th>
                         <th scope="col">price</th>
