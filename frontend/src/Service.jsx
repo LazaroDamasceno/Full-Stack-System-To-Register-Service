@@ -46,7 +46,7 @@ export default function Service() {
                     <br/>
                     <div>
                         <label className="form-label">Starting date:</label>
-                        <input onChange={handleChange} value={service.startingDate} name="endingDate" type="date" className="form-control" />
+                        <input onChange={handleChange} value={service.startingDate} name="startingDate" type="date" className="form-control" />
                     </div>
                     <br/>
                     <div>
