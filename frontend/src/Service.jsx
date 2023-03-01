@@ -18,10 +18,14 @@ export default function Service() {
         setService({...service, [event.target.name]:[event.target.value]})
     }
 
+    function handleSubmit(event) {
+        event.preventDefault()
+    }
+
     return (
         <div className="container">
             <h1>Registration of Services</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="col-6">
                     <div>
                         <label className="form-label">Client's name:</label>
