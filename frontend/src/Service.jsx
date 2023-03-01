@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 export default function Service() {
@@ -26,6 +26,12 @@ export default function Service() {
                 console.log(data)
             })
     }
+
+    useEffect(() => {
+        axios.get("http://localhost:8080/services/all").then(result => {
+            setServices(result.data)
+        })
+    }, [])
 
     return (
         <div className="container">
@@ -74,9 +80,14 @@ export default function Service() {
             <table className="table">
                 <thead>
                     <tr>
-                        <th scope="col">Client's name</th>
+                        <th scope="col">id</th>
+                        <th scope="col">client's name</th>
                         <th scope="col">description</th>
                         <th scope="col">price</th>
+                        <th scope="col">starting date</th>
+                        <th scope="col">ending date</th>
+                        <th scope="col">price paid</th>
+                        <th scope="col">payment date</th>
                         <th scope="col">status</th>
                     </tr>
                 </thead>
@@ -84,9 +95,14 @@ export default function Service() {
                 {
                     services.map(data => (
                     <tr>
+                        <td>{data.id}</td>
                         <td>{data.clientName}</td>
                         <td>{data.description}</td>
                         <td>{data.price}</td>
+                        <td>{data.startingDate}</td>
+                        <td>{data.endingDate}</td>
+                        <td>{data.pricePaid}</td>
+                        <td>{data.paymentDay}</td>
                         <td>{data.status}</td>
                     </tr>
                 ))}
