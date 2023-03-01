@@ -23,7 +23,7 @@ export default function Service() {
         event.preventDefault()
         axios
             .post("http://localhost:8080/services/add", service)
-            .then(result => {
+            .then((result) => {
                 setUpdate(result)
             })
     }
@@ -89,6 +89,7 @@ export default function Service() {
                         <th scope="col">pricePaid</th>
                         <th scope="col">paymentDay</th>
                         <th scope="col">status</th>
+                        <th scope="col">options</th>
                     </tr>
                 </thead>
                 <tbody>
