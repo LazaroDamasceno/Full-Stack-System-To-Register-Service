@@ -44,8 +44,8 @@ public class ServiceService {
 
     public ServiceEntity update(ServiceEntity entity) {
         if (entity.getPricePaid() != null
-                || entity.getPricePaid() > 0
-                || entity.getPaymentDate() != null
+                && entity.getPricePaid() > 0
+                && entity.getPaymentDate() != null
         ) {
             entity.setStatus("FINISHED");
         }
