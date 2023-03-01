@@ -4,7 +4,12 @@ import axios from "axios";
 export default function Service() {
     const [service, setService] = useState({
         clientName:'',
-
+        startingDate:'',
+        endingDate:'',
+        description:'',
+        price:'',
+        amountPaid:'',
+        paymentDate:''
     })
 
     return (
