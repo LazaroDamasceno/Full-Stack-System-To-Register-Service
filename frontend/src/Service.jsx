@@ -13,6 +13,7 @@ export default function Service() {
     })
 
     const [services, setServices] = useState([])
+    const [update, setUpdate] = useState()
 
     function handleChange(event) {
         setService({...service, [event.target.name]:event.target.value})
@@ -22,8 +23,8 @@ export default function Service() {
         event.preventDefault()
         axios
             .post("http://localhost:8080/services/add", service)
-            .then(data => {
-                console.log(data)
+            .then(result => {
+                setUpdate(result)
             })
     }
 
@@ -31,7 +32,7 @@ export default function Service() {
         axios.get("http://localhost:8080/services/all").then(result => {
             setServices(result.data)
         })
-    }, [])
+    }, [update])
 
     return (
         <div className="container">
@@ -86,23 +87,18 @@ export default function Service() {
                         <th scope="col">price</th>
                         <th scope="col">starting date</th>
                         <th scope="col">ending date</th>
-                        <th scope="col">price paid</th>
-                        <th scope="col">payment date</th>
                         <th scope="col">status</th>
                     </tr>
                 </thead>
                 <tbody>
                 {
                     services.map(data => (
-                    <tr>
-                        <td>{data.id}</td>
+                    <tr key={data.id}>
                         <td>{data.clientName}</td>
                         <td>{data.description}</td>
                         <td>{data.price}</td>
                         <td>{data.startingDate}</td>
                         <td>{data.endingDate}</td>
-                        <td>{data.pricePaid}</td>
-                        <td>{data.paymentDay}</td>
                         <td>{data.status}</td>
                     </tr>
                 ))}
