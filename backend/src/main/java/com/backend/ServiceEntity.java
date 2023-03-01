@@ -24,7 +24,7 @@ public class ServiceEntity {
     @Column(nullable = false)
     private String description;
 
-     Double pricePaid;
+    private Double amountPaid;
 
     @Temporal(TemporalType.DATE)
     private Date startingDate = new Date();

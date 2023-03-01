@@ -3,7 +3,6 @@ package com.backend;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.Date;
 import java.util.List;
 
@@ -31,8 +30,8 @@ public class ServiceService {
     }
 
     public ServiceEntity add(ServiceEntity entity) {
-        if (entity.getPricePaid() == null
-                || entity.getPricePaid() == 0
+        if (entity.getAmountPaid() == null
+                || entity.getAmountPaid() == 0
                 || entity.getPaymentDate() == null)
         {
             entity.setStatus("PENDING");
@@ -43,8 +42,8 @@ public class ServiceService {
     }
 
     public ServiceEntity update(ServiceEntity entity) {
-        if (entity.getPricePaid() != null
-                && entity.getPricePaid() > 0
+        if (entity.getAmountPaid() != null
+                && entity.getAmountPaid() > 0
                 && entity.getPaymentDate() != null
         ) {
             entity.setStatus("FINISHED");
