@@ -82,6 +82,8 @@ export default function Service() {
                         <th scope="col">price</th>
                         <th scope="col">starting date</th>
                         <th scope="col">ending date</th>
+                        <th scope="col">pricePaid</th>
+                        <th scope="col">paymentDay</th>
                         <th scope="col">status</th>
                     </tr>
                 </thead>
@@ -94,6 +96,8 @@ export default function Service() {
                         <td>{data.price}</td>
                         <td>{data.startingDate}</td>
                         <td>{data.endingDate}</td>
+                        <td>{data.pricePaid}</td>
+                        <td>{data.paymentDay}</td>
                         <td>{data.status}</td>
                     </tr>
                 ))}
