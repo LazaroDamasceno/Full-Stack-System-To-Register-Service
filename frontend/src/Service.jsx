@@ -70,6 +70,28 @@ export default function Service() {
                     <input type="submit" className="btn btn-success" value="registration"/>
                 </form>
             </div>
+            <hr/><hr/>
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Client's name</th>
+                        <th scope="col">description</th>
+                        <th scope="col">price</th>
+                        <th scope="col">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {
+                    services.map(data => (
+                    <tr>
+                        <td>{data.clientName}</td>
+                        <td>{data.description}</td>
+                        <td>{data.price}</td>
+                        <td>{data.status}</td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
         </div>
     )
 }
