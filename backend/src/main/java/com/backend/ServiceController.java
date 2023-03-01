@@ -9,27 +9,28 @@ import java.util.List;
 @RestController
 @RequestMapping("/services")
 @AllArgsConstructor
+@CrossOrigin("http://localhost:5173/")
 public class ServiceController {
 
     final
     ServiceService service;
 
-    @GetMapping("/")
+    @GetMapping("/all")
     public List<ServiceEntity> getAll() {
         return service.getAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/all/{id}")
     public ServiceEntity getById(@PathVariable(value = "id") int id) {
         return service.getById(id);
     }
 
-    @GetMapping("/pending")
+    @GetMapping("/all/pending")
     public List<ServiceEntity> getServicesWithPendingPayment() {
         return service.getServicesWithPendingPayment();
     }
 
-    @GetMapping("/cancelled")
+    @GetMapping("/all/cancelled")
     public List<ServiceEntity> getCancelledServices() {
         return service.getCancelledServices();
     }
