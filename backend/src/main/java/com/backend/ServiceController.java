@@ -16,7 +16,6 @@ public class ServiceController {
     ServiceService service;
 
     @GetMapping("/all")
-    @CrossOrigin("http://localhost:5173/")
     public List<ServiceEntity> getAll() {
         return service.getAll();
     }
