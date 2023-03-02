@@ -16,15 +16,42 @@ export default function Service() {
 
     const [update, setUpdate] = useState()
 
+    function clear() {
+        setService({
+            clientName:"",
+            startingDate:"",
+            endingDate:"",
+            description:"",
+            price:"",
+            amountPaid:"",
+            paymentDay:""
+        })
+    }
+
     function handleChange(event) {
         setService({...service, [event.target.name]:event.target.value})
     }
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios
-            .post("http://localhost:8080/services/add", service)
-            .then(result => {
+        if (service.id == undefined) {
+            axios
+                .post("http://localhost:8080/services/add", service)
+                .then((result) => {
+                    setUpdate(result)
+                })
+        } else {
+            axios.put("http://localhost:8080/services/update", service)
+                .then((result) => {
+                    setUpdate(result)
+                })
+        }
+        clear()
+    }
+
+    function deleteById(id) {
+        axios.delete("http://localhost:8080/services/delete/"+id)
+            .then((result) => {
                 setUpdate(result)
             })
     }
@@ -32,7 +59,8 @@ export default function Service() {
     useEffect(() => {
         axios.get("http://localhost:8080/services/all").then(result => {
             setServices(result.data)
-        })}, [update])
+        })}, [update]
+    )
 
     return (
         <div className="container">
@@ -48,7 +76,7 @@ export default function Service() {
                         <input name="clientName"
                                type="text"
                                className="form-control"
-                               value={service.clientName}
+                               value={service.clientName || ''}
                                onChange={handleChange}
                         />
                     </div>
@@ -58,7 +86,7 @@ export default function Service() {
                         <input  name="startingDate"
                                 type="date"
                                 className="form-control"
-                                value={service.startingDate}
+                                value={service.startingDate || ''}
                                 onChange={handleChange}
                         />
                     </div>
@@ -68,7 +96,7 @@ export default function Service() {
                         <input name="endingDate"
                                type="date"
                                className="form-control"
-                               value={service.endingDate}
+                               value={service.endingDate || ''}
                                onChange={handleChange}
                         />
                     </div>
@@ -78,7 +106,7 @@ export default function Service() {
                         <input name="description"
                                type="text"
                                className="form-control"
-                               value={service.description}
+                               value={service.description || ''}
                                onChange={handleChange}
                         />
                     </div>
@@ -88,7 +116,7 @@ export default function Service() {
                         <input name="price"
                                type="number"
                                className="form-control"
-                               value={service.price}
+                               value={service.price || ''}
                                onChange={handleChange}
                         />
                     </div>
@@ -98,7 +126,7 @@ export default function Service() {
                         <input name="amountPaid"
                                type="number"
                                className="form-control"
-                               value={service.amountPaid}
+                               value={service.amountPaid || ''}
                                onChange={handleChange}
                         />
                     </div>
@@ -108,7 +136,7 @@ export default function Service() {
                         <input name="paymentDay"
                                type="date"
                                className="form-control"
-                               value={service.paymentDay}
+                               value={service.paymentDay || ''}
                                onChange={handleChange}
                         />
                     </div>
@@ -134,7 +162,15 @@ export default function Service() {
                         <td>{serv.description}</td>
                         <td>{serv.price}</td>
                         <td>{serv.status}</td>
-                        <td></td>
+                        <td>
+                            {serv.status != 'CANCELLED' &&
+                                <button onClick={() => setService(serv)} className="btn btn-primary">Update</button>
+                            }&nbsp;&nbsp;
+                            {serv.status != 'CANCELLED' &&
+                                <button onClick={() => deleteById(serv.id)} className="btn btn-danger">Delete</button>
+                            }&nbsp;&nbsp;
+                            <button className="btn btn-warning">Cancel</button>
+                        </td>
                     </tr>
                 ))}
                 </tbody>
