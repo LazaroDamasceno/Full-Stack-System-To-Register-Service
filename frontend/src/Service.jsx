@@ -1,4 +1,5 @@
 import {useState} from "react";
+import axios from "axios";
 
 export default function Service() {
     const [service, setService] = useState({
@@ -14,12 +15,16 @@ export default function Service() {
     //const [services, setServices] = useState([])
 
     function handleChange(event) {
-        setService({...service, [event.target.name]: [event.target.value]})
+        setService({...service, [event.target.name]:event.target.value})
     }
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log(service)
+        axios
+            .post("http://localhost:8080/services/add", service)
+            .then(result => {
+                console.log(result)
+            })
     }
     return (
         <div className="container">
