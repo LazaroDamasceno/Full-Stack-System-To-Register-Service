@@ -56,6 +56,13 @@ export default function Service() {
             })
     }
 
+    function cancel(id) {
+        axios.put("http://localhost:8080/services/cancel/"+id)
+            .then((result) => {
+                setUpdate(result)
+            })
+    }
+
     useEffect(() => {
         axios.get("http://localhost:8080/services/all").then(result => {
             setServices(result.data)
@@ -169,7 +176,7 @@ export default function Service() {
                             {serv.status != 'CANCELLED' &&
                                 <button onClick={() => deleteById(serv.id)} className="btn btn-danger">Delete</button>
                             }&nbsp;&nbsp;
-                            <button className="btn btn-warning">Cancel</button>
+                            <button onClick={() => cancel(serv.id)} className="btn btn-warning">Cancel</button>
                         </td>
                     </tr>
                 ))}
