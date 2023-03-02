@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import axios from "axios";
 
 export default function Service() {
@@ -20,7 +20,9 @@ export default function Service() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log(service)
+        axios.post("http://localhost:8080/services/add", service).then(result => {
+            console.log(result)
+        })
     }
 
     return (
@@ -45,7 +47,7 @@ export default function Service() {
                     <br/>
                     <div>
                         <label className="form-label">Description:</label>
-                        <input onChange={handleChange} onChange={handleChange} value={service.description}  name="description"  type="text" className="form-control" />
+                        <input onChange={handleChange} value={service.description}  name="description"  type="text" className="form-control" />
                     </div>
                     <br/>
                     <div>

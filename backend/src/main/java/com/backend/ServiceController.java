@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@AllArgsConstructor
-@RequestMapping("/services")
 @CrossOrigin("http://localhost:5173/")
+@AllArgsConstructor
+@RestController
+@RequestMapping("/services")
 public class ServiceController {
 
     final

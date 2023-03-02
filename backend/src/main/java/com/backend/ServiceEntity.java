@@ -15,13 +15,10 @@ public class ServiceEntity {
     @Column(nullable = false)
     private Integer id;
 
-    @Column(nullable = false)
     private String clientName;
-
-    @Column(nullable = false)
+    
     private Double price;
 
-    @Column(nullable = false)
     private String description;
 
     private Double amountPaid;
