@@ -19,13 +19,13 @@ export default function Service() {
 
     function handleSubmit(event) {
         event.preventDefault()
-
+        console.log(service)
     }
     return (
         <div className="container">
             <h1>Registration of services</h1>
             <br />
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="col-6">
                     <div>
                         <label>client's name:</label>
