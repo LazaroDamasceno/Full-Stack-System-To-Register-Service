@@ -29,3 +29,5 @@ To run the project wholly, open two CMDs.
 On the 1st CMD, type **cd frontend**, then **npm run dev**.
 
 On the 2nd CMD, type **cd backend**, then **./mvnw clean spring-boot:run**.
+
+Both need be running at the same time.
