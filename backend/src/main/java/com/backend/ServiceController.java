@@ -50,7 +50,7 @@ public class ServiceController {
         return service.cancelService(id);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete")
     public ResponseEntity<Void> delete(@RequestBody ServiceEntity entity) {
         service.delete(entity);
         return ResponseEntity.ok().build();
