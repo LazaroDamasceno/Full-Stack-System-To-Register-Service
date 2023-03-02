@@ -17,8 +17,10 @@ export default function Service() {
         setService({...service, [event.target.name]: [event.target.value]})
     }
 
+    function handleSubmit(event) {
+        event.preventDefault()
 
-
+    }
     return (
         <div className="container">
             <h1>Registration of services</h1>
@@ -94,6 +96,8 @@ export default function Service() {
                                onChange={handleChange}
                         />
                     </div>
+                    <br />
+                    <input type="submit" value="Register" className="btn btn-success"/>
                 </div>
             </form>
         </div>
