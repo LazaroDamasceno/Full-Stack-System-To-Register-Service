@@ -51,8 +51,14 @@ public class ServiceController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable(value = "id") Integer id) {
-        service.delete(id);
+    public ResponseEntity<Void> delete(@RequestBody ServiceEntity entity) {
+        service.delete(entity);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable(value = "id") Integer id) {
+        service.deleteById(id);
         return ResponseEntity.ok().build();
     }
 

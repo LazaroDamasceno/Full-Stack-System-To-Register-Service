@@ -2,6 +2,7 @@ package com.backend;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Date;
 import java.util.List;
@@ -58,7 +59,11 @@ public class ServiceService {
         return repository.saveAndFlush(entity);
     }
 
-    public void delete(int id) {
+    public void delete(@RequestBody ServiceEntity entity) {
+        repository.delete(entity);
+    }
+
+    public void deleteById(int id) {
         repository.deleteById(id);
     }
 
