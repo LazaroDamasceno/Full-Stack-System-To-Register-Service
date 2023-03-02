@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 export default function Service() {
@@ -12,7 +12,9 @@ export default function Service() {
         paymentDay:""
     });
 
-    //const [services, setServices] = useState([])
+    const [services, setServices] = useState([])
+
+    const [update, setUpdate] = useState()
 
     function handleChange(event) {
         setService({...service, [event.target.name]:event.target.value})
@@ -23,94 +25,120 @@ export default function Service() {
         axios
             .post("http://localhost:8080/services/add", service)
             .then(result => {
-                console.log(result)
+                setUpdate(result)
             })
     }
+
+    useEffect(() => {
+        axios.get("http://localhost:8080/services/all").then(result => {
+            setServices(result.data)
+        })}, [update])
+
     return (
         <div className="container">
             <h1>Registration of services</h1>
             <br />
             <section>
-                <form onSubmit={handleSubmit}>
-                    <div className="col-6">
-                        <div>
-                            <label>client's name:</label>
-                            <input name="clientName"
-                                   type="text"
-                                   className="form-control"
-                                   value={service.clientName}
-                                   onChange={handleChange}
-                            />
-                        </div>
-                        <br />
-                        <div>
-                            <label>starting date:</label>
-                            <input  name="startingDate"
-                                    type="date"
-                                    className="form-control"
-                                    value={service.startingDate}
-                                    onChange={handleChange}
-                            />
-                        </div>
-                        <br />
-                        <div>
-                            <label>ending date:</label>
-                            <input name="endingDate"
-                                   type="date"
-                                   className="form-control"
-                                   value={service.endingDate}
-                                   onChange={handleChange}
-                            />
-                        </div>
-                        <br />
-                        <div>
-                            <label>description:</label>
-                            <input name="description"
-                                   type="text"
-                                   className="form-control"
-                                   value={service.description}
-                                   onChange={handleChange}
-                            />
-                        </div>
-                        <br />
-                        <div>
-                            <label>price:</label>
-                            <input name="price"
-                                   type="number"
-                                   className="form-control"
-                                   value={service.price}
-                                   onChange={handleChange}
-                            />
-                        </div>
-                        <br />
-                        <div>
-                            <label>amount paid:</label>
-                            <input name="amountPaid"
-                                   type="number"
-                                   className="form-control"
-                                   value={service.amountPaid}
-                                   onChange={handleChange}
-                            />
-                        </div>
-                        <br />
-                        <div>
-                            <label>payment day:</label>
-                            <input name="paymentDay"
-                                   type="date"
-                                   className="form-control"
-                                   value={service.paymentDay}
-                                   onChange={handleChange}
-                            />
-                        </div>
-                        <br />
-                        <input type="submit" value="Register" className="btn btn-success"/>
-                    </div>
-                </form>
-            </section>
-            <br />
-            <section>
 
             </section>
+            <form onSubmit={handleSubmit}>
+                <div className="col-6">
+                    <div>
+                        <label>client's name:</label>
+                        <input name="clientName"
+                               type="text"
+                               className="form-control"
+                               value={service.clientName}
+                               onChange={handleChange}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label>starting date:</label>
+                        <input  name="startingDate"
+                                type="date"
+                                className="form-control"
+                                value={service.startingDate}
+                                onChange={handleChange}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label>ending date:</label>
+                        <input name="endingDate"
+                               type="date"
+                               className="form-control"
+                               value={service.endingDate}
+                               onChange={handleChange}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label>description:</label>
+                        <input name="description"
+                               type="text"
+                               className="form-control"
+                               value={service.description}
+                               onChange={handleChange}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label>price:</label>
+                        <input name="price"
+                               type="number"
+                               className="form-control"
+                               value={service.price}
+                               onChange={handleChange}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label>amount paid:</label>
+                        <input name="amountPaid"
+                               type="number"
+                               className="form-control"
+                               value={service.amountPaid}
+                               onChange={handleChange}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <label>payment day:</label>
+                        <input name="paymentDay"
+                               type="date"
+                               className="form-control"
+                               value={service.paymentDay}
+                               onChange={handleChange}
+                        />
+                    </div>
+                    <br />
+                    <input type="submit" value="Register" className="btn btn-success"/>
+                </div>
+            </form>
+            <br />
+            <table className="table">
+                <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">description</th>
+                    <th scope="col">price</th>
+                    <th scope="col">status</th>
+                    <th scope="col">options</th>
+                </tr>
+                </thead>
+                <tbody>
+                {services.map(serv => (
+                    <tr key={serv.id}>
+                        <td>{serv.clientName}</td>
+                        <td>{serv.description}</td>
+                        <td>{serv.price}</td>
+                        <td>{serv.status}</td>
+                        <td></td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
         </div>
     )
 }
