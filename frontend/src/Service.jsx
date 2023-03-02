@@ -204,7 +204,7 @@ export default function Service() {
                                 serv.status != 'CANCELLED' &&
                                 <button onClick={() => deleteById(serv.id)} className="btn btn-danger">Delete</button>
                             }&nbsp;&nbsp;
-                            else <button onClick={() => cancel(serv.id)} className="btn btn-warning">Cancel</button>
+                            <button onClick={() => cancel(serv.id)} className="btn btn-warning">Cancel</button>
                         </td>
                     </tr>
                 ))}
