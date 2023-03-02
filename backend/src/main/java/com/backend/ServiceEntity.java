@@ -12,26 +12,17 @@ public class ServiceEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false)
     private Integer id;
-
     private String clientName;
-    
     private Double price;
-
     private String description;
-
     private Double amountPaid;
-
     @Temporal(TemporalType.DATE)
     private Date startingDate = new Date();
-
     @Temporal(TemporalType.DATE)
     private Date endingDate;
-
     @Temporal(TemporalType.DATE)
     private Date paymentDate;
-
     private String status;
 
 }
