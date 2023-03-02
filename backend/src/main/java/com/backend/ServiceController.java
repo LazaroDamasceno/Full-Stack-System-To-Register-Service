@@ -34,6 +34,7 @@ public class ServiceController {
     public List<ServiceEntity> getCancelledServices() {
         return service.getCancelledServices();
     }
+
     @PostMapping("/add")
     public ServiceEntity add(@RequestBody ServiceEntity entity) {
         return service.add(entity);

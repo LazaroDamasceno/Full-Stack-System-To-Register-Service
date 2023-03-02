@@ -12,7 +12,7 @@ export default function Service() {
         paymentDate:''
     })
 
-    //const [services, setServices] = useState([])
+    const [services, setServices] = useState([])
 
     function handleChange(event) {
         setService({...service, [event.target.name]:[event.target.value]})
