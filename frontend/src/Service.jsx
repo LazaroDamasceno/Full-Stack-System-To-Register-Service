@@ -170,13 +170,18 @@ export default function Service() {
                         <td>{serv.price}</td>
                         <td>{serv.status}</td>
                         <td>
-                            {serv.status != 'CANCELLED' &&
+                            {
+                                serv.status != 'CANCELLED' &&
                                 <button onClick={() => setService(serv)} className="btn btn-primary">Update</button>
                             }&nbsp;&nbsp;
-                            {serv.status != 'CANCELLED' &&
+                            {
+                                serv.status != 'CANCELLED' &&
                                 <button onClick={() => deleteById(serv.id)} className="btn btn-danger">Delete</button>
                             }&nbsp;&nbsp;
-                            <button onClick={() => cancel(serv.id)} className="btn btn-warning">Cancel</button>
+                            {
+                                serv.status == 'CANCELED' ||
+                                <button onClick={() => cancel(serv.id)} className="btn btn-warning">Cancel</button>
+                            }
                         </td>
                     </tr>
                 ))}
