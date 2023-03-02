@@ -20,7 +20,7 @@ export default function Service() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post("http://localhost:8080/services/add/", service).then(r => {
+        axios.post("http://localhost:8080/services/add", service).then(r => {
             console.log(r)
     })}
 
