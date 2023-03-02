@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 
 export default function Service() {
+
     const [service, setService] = useState({
         clientName:"",
         startingDate:"",
@@ -68,6 +69,24 @@ export default function Service() {
             setServices(result.data)
         })}, [update]
     )
+
+    function getAll() {
+        axios.get("http://localhost:8080/services/all").then(result => {
+            setServices(result.data)
+        })
+    }
+
+    function getServicesWithPendingPayment() {
+        axios.get("http://localhost:8080/services/all/pending").then(result => {
+            setServices(result.data)
+        })
+    }
+
+    function getCancelledServices() {
+        axios.get("http://localhost:8080/services/all/cancelled").then(result => {
+            setServices(result.data)
+        })
+    }
 
     return (
         <div className="container">
@@ -152,6 +171,13 @@ export default function Service() {
                 </div>
             </form>
             <br />
+
+            <button onClick={getAll} type="button" className="btn btn-primary">Get All Services</button>&nbsp;&nbsp;
+            <button onClick={getServicesWithPendingPayment} type="button" className="btn btn-secondary">Get Services With Pending Payment</button>&nbsp;&nbsp;
+            <button onClick={getCancelledServices} type="button" className="btn btn-success">Get Cancelled Services</button>
+            <br />
+            <br />
+
             <table className="table">
                 <thead>
                 <tr>
@@ -179,7 +205,7 @@ export default function Service() {
                                 <button onClick={() => deleteById(serv.id)} className="btn btn-danger">Delete</button>
                             }&nbsp;&nbsp;
                             {
-                                serv.status == 'CANCELED' ||
+                                serv.status != 'CANCELED' &&
                                 <button onClick={() => cancel(serv.id)} className="btn btn-warning">Cancel</button>
                             }
                         </td>
@@ -189,4 +215,5 @@ export default function Service() {
             </table>
         </div>
     )
+
 }
