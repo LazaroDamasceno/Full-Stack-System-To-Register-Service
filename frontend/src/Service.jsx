@@ -1,4 +1,18 @@
+import {useState} from "react";
+
 export default function Service() {
+    const [service, setService] = useState({
+        clientName:"",
+        startingDate:"",
+        endingDate:"",
+        description:"",
+        price:"",
+        amountPaid:"",
+        paymentDay:""
+    });
+
+    //const [services, setServices] = useState([])
+
     return (
         <div className="container">
             <h1>Registration of services</h1>
