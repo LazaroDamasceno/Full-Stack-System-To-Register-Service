@@ -20,10 +20,9 @@ export default function Service() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post("http://localhost:8080/services/add", service).then(result => {
-            console.log(result)
-        })
-    }
+        axios.post("http://localhost:8080/services/add/", service).then(r => {
+            console.log(r)
+    })}
 
     return (
         <div className="container">
@@ -76,7 +75,7 @@ export default function Service() {
                     </div>
                     <br/>
                     <div>
-                        <label className="form-label">amount paid:</label>
+                        <label className="form-label">Amount paid:</label>
                         <input onChange={handleChange}
                                value={service.amountPaid}
                                name="amountPaid"
@@ -93,7 +92,9 @@ export default function Service() {
                                className="form-control" />
                     </div>
                     <br/>
-                    <input className="btn btn-success" type="submit" value="Register data" />
+                    <input className="btn btn-success"
+                           type="submit"
+                           value="Register data" />
                 </div>
             </form>
         </div>
