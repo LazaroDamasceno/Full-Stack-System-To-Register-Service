@@ -24,17 +24,21 @@ It's important having the newest LTS version of [Node](https://nodejs.org/en/) o
 
 # 3 Creating the project
 
-1 Open the CMD
-  a Type ``mkdir Full-Stack-System-To-Register-Service``
-  b Type ``cd Full-Stack-System-To-Register-Service``
-2 To create the backend, use the [spring initializer](https://start.spring.io)
-  a Set the initial settings
-  b In the dependencies, pick:
-    1 ``Lombok``
-    2 ``Spring Boot DevTools``
-    3 ``Spring Web``
-    4 ``Spring Data JPA``
-    5 ``H2 Database``
+1 Initial settings
+  a Type ``mkdir Full-Stack-System-To-Register-Service``<br>
+  b Type ``cd Full-Stack-System-To-Register-Service``<br>
+
+2 To create the backend, use the [spring initializer](https://start.spring.io)<br>
+  a Set the initial settings<br>
+  b In the dependencies, pick:<br>
+    1 ``Lombok``<br>
+    2 ``Spring Boot DevTools``<br>
+    3 ``Spring Web``<br>
+    4 ``Spring Data JPA``<br>
+    5 ``H2 Database``<br>
+  c Generate the backend
+
+3  
 
 # 4 Running the project
 
