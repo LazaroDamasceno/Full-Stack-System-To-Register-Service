@@ -29,14 +29,14 @@ It's important having the newest LTS version of [Node](https://nodejs.org/en/) o
   b Type ``cd Full-Stack-System-To-Register-Service``<br>
 
 2 To create the backend, use the [spring initializer](https://start.spring.io)<br>
-  a Set the initial settings<br>
-  b In the dependencies, pick:<br>
-    1 ``Lombok``<br>
-    2 ``Spring Boot DevTools``<br>
-    3 ``Spring Web``<br>
-    4 ``Spring Data JPA``<br>
-    5 ``H2 Database``<br>
-  c Generate the backend
+2.a Set the initial settings<br>
+2.b In the dependencies, pick:<br>
+2.b.1 ``Lombok``<br>
+2.b.2 ``Spring Boot DevTools``<br>
+2.b.3 ``Spring Web``<br>
+2.b.4 ``Spring Data JPA``<br>
+2.b.5 ``H2 Database``<br>
+2.c Generate the backend
 
 3  
 
