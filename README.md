@@ -22,12 +22,26 @@ There are various Java available to be downloaded, such as the [Oracle JDK](http
 
 It's important having the newest LTS version of [Node](https://nodejs.org/en/) on the PC, because every new update brings more security to the Node.
 
-# 3 Running the project
+# 3 Creating the project
+
+1 Open the CMD
+  a Type ``mkdir Full-Stack-System-To-Register-Service``
+  b Type ``cd Full-Stack-System-To-Register-Service``
+2 To create the backend, use the [spring initializer](https://start.spring.io)
+  a Set the initial settings
+  b In the dependencies, pick:
+    1 ``Lombok``
+    2 ``Spring Boot DevTools``
+    3 ``Spring Web``
+    4 ``Spring Data JPA``
+    5 ``H2 Database``
+
+# 4 Running the project
 
 To run the project wholly, open two CMDs.
 
-On the 1st CMD, type **cd frontend**, then **npm run dev**.
+On the 1st CMD, type ``cd frontend``, then ``npm run dev``.
 
-On the 2nd CMD, type **cd backend**, then **./mvnw clean spring-boot:run**.
+On the 2nd CMD, type ``cd backend``, then ``./mvnw clean spring-boot:run``.
 
 Both need be running at the same time.
