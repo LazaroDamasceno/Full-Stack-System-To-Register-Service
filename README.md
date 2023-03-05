@@ -42,8 +42,10 @@ c.5 `H2 Database`<br>
 d. Generate the backend
 
 **To create the front end**
-a. Open the CMD
-b. Type `npm create vite frontend -- --template react`
+a. Open the CMD<br>
+b. Type `npm create vite frontend -- --template react`<br>
+c. Type `cd frontend`<br>
+d. Type `npm install`
 
 
 # 4 Running the project
