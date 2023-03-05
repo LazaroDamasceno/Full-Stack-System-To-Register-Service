@@ -48,7 +48,7 @@ a. Open the CMD<br>
 b. Type `npm create vite frontend -- --template react`<br>
 c. Type `cd frontend`<br>
 d. Type `npm install`<br>
-**Note 4**: `npm install` install the node  modules that permits the frontend run.
+**Note 4**: `npm install` installs the node  modules that permits the frontend run.
 
 ## 4 Running the project
 
