@@ -35,7 +35,7 @@ b. Type `cd Full-Stack-System-To-Register-Service`<br>
 **Backend**<br>
 a. To create the backend, use the [spring initializer](https://start.spring.io)<br>
 b. Set the initial settings<br>
-c.  In the dependencies, pick:<br>
+c. In the dependencies, pick:<br>
 c.1 `Lombok`<br>
 c.2 `Spring Boot DevTools`<br>
 c.3 `Spring Web`<br>
