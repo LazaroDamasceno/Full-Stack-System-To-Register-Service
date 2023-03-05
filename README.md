@@ -1,6 +1,8 @@
-# 1 General Information
+# Full-Stack-System-To-Register-Service
 
-## Version's technologies used
+## 1 General Information
+
+### Technologies' versions used
 
 Node's version: 18.14
 
@@ -18,9 +20,9 @@ Development of a page to register services with ReactJS (frontend) and Spring Bo
 
 If the installed Java is not a LTS (Long Term Support) version, change to one out of the LTS ones: 8, 11 or 17.
 
-There are various Java available to be downloaded, such as the [Oracle JDK](https://www.oracle.com/java/technologies/downloads) and the [Amazon Corretto OpenJDK](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc). 
+**Note**: There are various Java available to be downloaded, such as the [Oracle JDK](https://www.oracle.com/java/technologies/downloads) and the [Amazon Corretto OpenJDK](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc). 
 
-It's important having the newest LTS version of [Node](https://nodejs.org/en/) on the PC, because every new update brings more security to the Node.
+**Note**: It's important having the newest LTS version of [Node](https://nodejs.org/en/) on the PC.
 
 # 3 Creating the project
 
