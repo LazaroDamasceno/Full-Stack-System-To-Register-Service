@@ -12,11 +12,11 @@ Java's version: 17.0.6
 
 Original source: [Página para Cadastro de Serviços - Spring Boot e React](https://www.youtube.com/watch?v=Sun4wXH88V4)
 
-##  Description
+###  Description
 
 Development of a page to register services with ReactJS (frontend) and Spring Boot (backend).
 
-# 2 Setting up the environment
+## 2 Setting up the environment
 
 If the installed Java is not a LTS (Long Term Support) version, change to one out of the LTS ones: 8, 11 or 17.
 
@@ -24,7 +24,7 @@ If the installed Java is not a LTS (Long Term Support) version, change to one ou
 
 **Note**: It's important having the newest LTS version of [Node](https://nodejs.org/en/) on the PC.
 
-# 3 Creating the project
+## 3 Creating the project
 
 **Initial settings**<br>
 a. Open the CMD<br>
@@ -50,7 +50,7 @@ c. Type `cd frontend`<br>
 d. Type `npm install`
 
 
-# 4 Running the project
+## 4 Running the project
 
 To run the project wholly, open two CMDs.
 
@@ -59,3 +59,5 @@ On the 1st CMD, type `cd frontend`, then `npm run dev`.
 On the 2nd CMD, type `cd backend`, then `./mvnw clean spring-boot:run`.
 
 Both need be running at the same time.
+
+[Click here](https://www.youtube.com/watch?v=5s8ZV6LAcLs) to watch the project running.
