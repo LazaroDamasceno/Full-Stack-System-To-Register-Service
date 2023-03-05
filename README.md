@@ -26,13 +26,13 @@ If the installed Java is not a LTS (Long Term Support) version, change to one ou
 
 # 3 Creating the project
 
-**Initial settings**
+**Initial settings**<br>
 a. Open the CMD<br>
 a. Type `mkdir Full-Stack-System-To-Register-Service`<br>
 b. Type `cd Full-Stack-System-To-Register-Service`<br>
 **Note**: Every operation after the steps bellow must happen inside the `Full-Stack-System-To-Register-Service` folder
 
-**Backend**
+**Backend**<br>
 a. To create the backend, use the [spring initializer](https://start.spring.io)<br>
 b. Set the initial settings<br>
 c.  In the dependencies, pick:<br>
@@ -43,7 +43,7 @@ c.4 `Spring Data JPA`<br>
 c.5 `H2 Database`<br>
 d. Generate the backend
 
-**To create the front end**
+**To create the front end**<br>
 a. Open the CMD<br>
 b. Type `npm create vite frontend -- --template react`<br>
 c. Type `cd frontend`<br>
