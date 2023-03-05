@@ -20,9 +20,9 @@ Development of a page to register services with ReactJS (frontend) and Spring Bo
 
 If the installed Java is not a LTS (Long Term Support) version, change to one out of the LTS ones: 8, 11 or 17.
 
-**Note 1**: There are various Java available to be downloaded, such as the [Oracle JDK](https://www.oracle.com/java/technologies/downloads) and the [Amazon Corretto OpenJDK](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc). 
+**Note**: There are various Java available to be downloaded, such as the [Oracle JDK](https://www.oracle.com/java/technologies/downloads) and the [Amazon Corretto OpenJDK](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc). 
 
-**Note 2**: It's important having the newest LTS version of [Node](https://nodejs.org/en/) on the PC.
+**Note**: It's important having the newest LTS version of [Node](https://nodejs.org/en/) on the PC.
 
 ## 3 Creating the project
 
@@ -30,7 +30,7 @@ If the installed Java is not a LTS (Long Term Support) version, change to one ou
 a. Open the CMD<br>
 a. Type `mkdir Full-Stack-System-To-Register-Service`<br>
 b. Type `cd Full-Stack-System-To-Register-Service`<br>
-**Note 3**: Every operation after the steps bellow must happen inside the `Full-Stack-System-To-Register-Service` folder
+**Note**: Every operation after the steps bellow must happen inside the `Full-Stack-System-To-Register-Service` folder
 
 **Backend**<br>
 a. To create the backend, use the [spring initializer](https://start.spring.io)<br>
@@ -48,7 +48,7 @@ a. Open the CMD<br>
 b. Type `npm create vite frontend -- --template react`<br>
 c. Type `cd frontend`<br>
 d. Type `npm install`<br>
-**Note 4**: `npm install` installs the node  modules that permits the frontend run.
+**Note**: `npm install` installs the node  modules that permits the frontend run.
 
 ## 4 Running the project
 
