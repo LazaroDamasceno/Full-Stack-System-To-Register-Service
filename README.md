@@ -24,28 +24,34 @@ It's important having the newest LTS version of [Node](https://nodejs.org/en/) o
 
 # 3 Creating the project
 
-1 Initial settings
-  a Type ``mkdir Full-Stack-System-To-Register-Service``<br>
-  b Type ``cd Full-Stack-System-To-Register-Service``<br>
+**Initial settings**
+a. Open the CMD<br>
+a. Type `mkdir Full-Stack-System-To-Register-Service`<br>
+b. Type `cd Full-Stack-System-To-Register-Service`<br>
+**Note**: Every operation after the steps bellow must happen inside the `Full-Stack-System-To-Register-Service` folder
 
-2 To create the backend, use the [spring initializer](https://start.spring.io)<br>
-2.a Set the initial settings<br>
-2.b In the dependencies, pick:<br>
-2.b.1 ``Lombok``<br>
-2.b.2 ``Spring Boot DevTools``<br>
-2.b.3 ``Spring Web``<br>
-2.b.4 ``Spring Data JPA``<br>
-2.b.5 ``H2 Database``<br>
-2.c Generate the backend
+**Backend**
+a. To create the backend, use the [spring initializer](https://start.spring.io)<br>
+b. Set the initial settings<br>
+c.  In the dependencies, pick:<br>
+c.1 `Lombok`<br>
+c.2 `Spring Boot DevTools`<br>
+c.3 `Spring Web`<br>
+c.4 `Spring Data JPA`<br>
+c.5 `H2 Database`<br>
+d. Generate the backend
 
-3  
+**To create the front end**
+a. Open the CMD
+b. Type `npm create vite frontend -- --template react`
+
 
 # 4 Running the project
 
 To run the project wholly, open two CMDs.
 
-On the 1st CMD, type ``cd frontend``, then ``npm run dev``.
+On the 1st CMD, type `cd frontend`, then `npm run dev`.
 
-On the 2nd CMD, type ``cd backend``, then ``./mvnw clean spring-boot:run``.
+On the 2nd CMD, type `cd backend`, then `./mvnw clean spring-boot:run`.
 
 Both need be running at the same time.
