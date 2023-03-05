@@ -60,4 +60,4 @@ On the 2nd CMD, type `cd backend`, then `./mvnw clean spring-boot:run`.
 
 Both need be running at the same time.
 
-[Click here](https://www.youtube.com/watch?v=5s8ZV6LAcLs) to watch the project running.
+[Click here to watch the project running](https://www.youtube.com/watch?v=5s8ZV6LAcLs).
