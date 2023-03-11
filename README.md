@@ -30,7 +30,7 @@ If the installed Java is not a LTS (Long Term Support) version, change to one ou
 a. Open the CMD<br>
 a. Type `mkdir Full-Stack-System-To-Register-Service`<br>
 b. Type `cd Full-Stack-System-To-Register-Service`<br>
-**Note**: Every operation after the steps bellow must happen inside the `Full-Stack-System-To-Register-Service` folder
+**Note**: Every operation after the steps above must happen inside the `Full-Stack-System-To-Register-Service` folder
 
 **Backend**<br>
 a. To create the backend, use the [spring initializer](https://start.spring.io)<br>
